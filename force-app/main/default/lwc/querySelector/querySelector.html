@@ -1,0 +1,12 @@
+<template>
+    <lightning-card>
+       <template for:each={userNames} for:item = "user">
+            <div  class = "name" key = {user}> {user}</div>
+       </template>
+    <h1> I am heading..</h1>
+    <button onclick = {fetchHandler}>fetch Details
+     
+    </button>
+    <h3 class = "inn"> </h3>
+</lightning-card>
+</template>

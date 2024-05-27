@@ -1,0 +1,22 @@
+<template>
+    <lightning-card title = "Looping Rendering"> 
+      <template for:each={carList} for:item="car">
+        <h1 key ={car}>{car}</h1>
+
+      </template>
+    </lightning-card>
+    <lightning-card title="Iterator Rendering">
+        <template iterator:ceo={ceoList}>
+            <div key={ceo.value.id}>
+            <template if:true ={ceo.first}>
+                <p>top coes list</p>
+            </template>
+              <h2>  {ceo.value.surn}</h2>
+              <template if:true ={ceo.last}>
+                <p>Thanks</p>
+            </template>
+        </div>
+        </template>
+    </lightning-card>
+    
+</template>

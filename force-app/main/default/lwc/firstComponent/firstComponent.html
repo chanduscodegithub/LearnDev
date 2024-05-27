@@ -1,0 +1,16 @@
+<template>
+    <lightning-card>
+  <!--two way data binding 
+  <h2> Two Way Data Binding </h2>-->
+  <input type = "text" onkeyup = {changeHandler}> 
+  <h4> {currentComponent} is part of {course}</h4>
+
+
+
+</lightning-card>
+<lightning-card title ="Track Property">
+    <lightning-input type = "text" label = "enter town" onkeyup = {trackHandler}> </lightning-input>
+<div> {address.town} is my city</div>
+   
+</lightning-card>
+</template>

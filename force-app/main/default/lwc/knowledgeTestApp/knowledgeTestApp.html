@@ -1,0 +1,35 @@
+<template>
+    <lightning-card title = "Knowledge Test App">
+        <div class = "slds-p-around_medium ">
+            <template if:true = {isSubmitted}>
+                <div class = {isScoredFull}> You have scored {correctedAnswers} out of {questionsList.length}</div>
+            </template>
+            <template for:each ={questionsList} for:item = "ques">
+                <div key = {ques.id} >
+                    <strong class ="slds-p-around_medium">{ques.question}
+                     <div class=" slds-grid slds-p-around_medium">
+                        <div class ="slds-col">
+                            <lightning-input type="radio" name={ques.id} value ="a" label ={ques.options.a} onclick ={changeHandler}> </lightning-input>
+                           
+                        </div>
+                        <div class ="slds-col">
+                            <lightning-input type="radio" name={ques.id} value ="b" label ={ques.options.b} onclick ={changeHandler} > </lightning-input>
+                            </div>
+                        <div class ="slds-col">
+                            <lightning-input type="radio" name={ques.id} value ="c" label ={ques.options.c} onclick ={changeHandler}></lightning-input>
+                            </div>
+                     </div>
+                    </strong> 
+                </div>
+                </template>
+
+
+                <lightning-button class="slds-p-around_medium" 
+                 label="Submit" variant ="brand" type ="submit"
+                 disabled ={allsubmittedOrNot}
+                  onclick = {submitHandler}></lightning-button>
+                <lightning-button label="Reset" variant ="brand" type ="reset" onclick = {resetHandler}></lightning-button>
+            
+            </div>
+    </lightning-card>
+</template>
