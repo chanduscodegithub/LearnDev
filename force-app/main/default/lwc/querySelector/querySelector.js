@@ -21,5 +21,6 @@ export default class QuerySelector extends LightningElement {
         }
 
         //hey added comment to check in vcss
+        //added again to check commit and push
     }
    
