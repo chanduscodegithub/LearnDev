@@ -11,6 +11,7 @@ export default class ConditionalRendering extends LightningElement {
     }
     get isHello(){
        return this.name ==='hello'
-
+//change
+//3rd change
     }
 }
