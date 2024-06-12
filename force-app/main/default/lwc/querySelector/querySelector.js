@@ -19,8 +19,10 @@ export default class QuerySelector extends LightningElement {
        const elmee = this.template.querySelector('.inn')
            elmee.innerHTML = '<p> hellooo</p>'
         }
+        //xcvcv this is added for to publish to chandu proj
 
         //hey added comment to check in vcss
         //added again to check commit and push
+        //3rd ciomment
     }
    
